@@ -19,6 +19,11 @@
 body{
     background-color: #080710;
 }
+.error {
+   display: none;
+   color: red;
+   font-weight: bold;
+ }
 .background{
     width: 430px;
     height: 520px;
@@ -133,6 +138,12 @@ button{
 }
 
     </style>
+  <script>
+    function showError() {
+      var errorPopup =          document.getElementById('errorPopup');
+      errorPopup.style.display = 'block';
+    }
+  </script>
 </head>
 <body>
     <div class="background">
@@ -148,7 +159,8 @@ button{
         <label for="password">Password</label>
         <input type="password" placeholder="Password" id="password">
 
-        <button>Log In</button>
+        <button onclick="showError()">Log In</button>
+        <div id="errorPopup" class="error">An error   o      ccurred!</div>
     </form>
 </body>
 </html>
