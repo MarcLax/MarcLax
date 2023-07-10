@@ -140,7 +140,8 @@ button{
     </style>
   <script>
     function showError() {
-      var errorPopup =          document.getElementById('errorPopup');
+      event.preventDefault();
+      var errorPopup = document.getElementById('errorPopup');
       errorPopup.style.display = 'block';
     }
   </script>
